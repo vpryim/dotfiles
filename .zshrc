@@ -2,18 +2,13 @@ export ZSH="/Users/vpryim/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="af-magic"
 ZSH_THEME="fwalch"
-plugins=(git)
-source $ZSH/oh-my-zsh.sh
+plugins=(git nvm)
 
 alias c=clear
 alias gs="git status"
 alias q=exit
 alias prettyjson="xargs -0 node -e \"console.log(require('util').inspect(JSON.parse(process.argv[1]), { colors: true }))\""
 alias vim=nvim
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
@@ -54,6 +49,8 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu no
 zstyle ':omz:plugins:nvm' lazy yes
 
-
 # fzf
 eval "$(fzf --zsh)"
+
+# Init oh-my-zsh
+source $ZSH/oh-my-zsh.sh
