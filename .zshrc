@@ -30,3 +30,8 @@ prompt pure
 
 # fzf
 eval "$(fzf --zsh)"
+
+# abbr
+source /usr/local/share/zsh-abbr/zsh-abbr.zsh
+
+abbr -S g=git
