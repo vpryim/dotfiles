@@ -6,6 +6,7 @@ alias vim=nvim
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
+autoload -Uz compinit; compinit
 autoload -U promptinit; promptinit
 
 HISTSIZE=5000

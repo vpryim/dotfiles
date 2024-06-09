@@ -1,6 +1,6 @@
 ## Requirements
 
-- `brew install git stow neovim zsh pure fzf`
+- `brew install git stow neovim zsh pure fzf zsh-completions`
 
 ## Installation
 
