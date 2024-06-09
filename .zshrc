@@ -22,6 +22,10 @@ setopt hist_find_no_dups
 # https://github.com/sindresorhus/pure?tab=readme-ov-file#colors
 zstyle :prompt:pure:path color yellow
 
+# History search using Up/Down keys
+bindkey '^[[A' up-line-or-search
+bindkey '^[[B' down-line-or-search
+
 # pure
 prompt pure
 
@@ -43,3 +47,4 @@ abbr -S -q c='clear'
 alias vim='nvim'
 alias prettyjson="xargs -0 node -e \"console.log(require('util').inspect(JSON.parse(process.argv[1]), { colors: true }))\""
 
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
