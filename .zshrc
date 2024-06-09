@@ -20,7 +20,7 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # https://github.com/sindresorhus/pure?tab=readme-ov-file#colors
-zstyle :prompt:pure:path color yellow
+zstyle :prompt:pure:path color '#ffb700'
 
 # History search using Up/Down keys
 bindkey '^[[A' up-line-or-search
