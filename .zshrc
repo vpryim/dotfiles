@@ -16,8 +16,8 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-zstyle :prompt:pure:path color white
-# zstyle :prompt:pure:path color cyan
+# https://github.com/sindresorhus/pure?tab=readme-ov-file#colors
+zstyle :prompt:pure:path color yellow
 
 # pure
 prompt pure
