@@ -40,6 +40,9 @@ bindkey -v
 bindkey "^H" backward-delete-char
 bindkey "^?" backward-delete-char
 
+# Define format for git log
+GIT_FMT_PINK="%C(#666666)%h%Creset %s %C(#ff69b4)%an%Creset %C(#666666)(%cr)%d%C(reset)"
+
 # abbr
 source /usr/local/share/zsh-abbr/zsh-abbr.zsh
 abbr -S -q g='git'
@@ -47,6 +50,8 @@ abbr -S -q ga='git add .'
 abbr -S -q gs='git status'
 abbr -S -q gd='git diff'
 abbr -S -q gc='git commit'
+abbr -S -q gl='git log --graph --format=$GIT_FMT_PINK'
+abbr -S -q gh='git log --graph --format=$GIT_FMT_PINK --since="last monday"'
 abbr -S -q gca='git commit --amend'
 abbr -S -q n='npm run'
 abbr -S -q k='kubectl'
