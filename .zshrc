@@ -23,15 +23,22 @@ setopt hist_find_no_dups
 zstyle :prompt:pure:path color '#5ac289'
 zstyle :prompt:pure:prompt:success color '#ffb700'
 
-# History search using Up/Down keys
-bindkey '^[[A' up-line-or-search
-bindkey '^[[B' down-line-or-search
 
 # pure
 prompt pure
 
 # fzf
 eval "$(fzf --zsh)"
+
+# History search using Up/Down keys
+bindkey '^[[A' up-line-or-search
+bindkey '^[[B' down-line-or-search
+
+# Enable vi mode, it should be before abbr
+# https://zsh-abbr.olets.dev/advanced.html#vi-mode
+bindkey -v
+bindkey "^H" backward-delete-char
+bindkey "^?" backward-delete-char
 
 # abbr
 source /usr/local/share/zsh-abbr/zsh-abbr.zsh
@@ -51,3 +58,4 @@ alias vim='nvim'
 alias prettyjson="xargs -0 node -e \"console.log(require('util').inspect(JSON.parse(process.argv[1]), { colors: true }))\""
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
