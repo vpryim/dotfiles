@@ -1,7 +1,6 @@
 ## Requirements
 
-- `git`
-- `stow`
+- `brew install git stow neovim zsh pure fzf`
 
 ## Installation
 
