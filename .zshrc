@@ -36,6 +36,7 @@ eval "$(fzf --zsh)"
 # abbr
 source /usr/local/share/zsh-abbr/zsh-abbr.zsh
 abbr -S -q g='git'
+abbr -S -q ga='git add .'
 abbr -S -q gs='git status'
 abbr -S -q gd='git diff'
 abbr -S -q gc='git commit'
@@ -43,6 +44,7 @@ abbr -S -q gca='git commit --amend'
 abbr -S -q n='npm run'
 abbr -S -q k='kubectl'
 abbr -S -q c='clear'
+abbr -S -q ll='ls -la'
 
 # alias
 alias vim='nvim'
