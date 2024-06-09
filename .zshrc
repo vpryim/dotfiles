@@ -1,9 +1,3 @@
-alias c=clear
-alias gs="git status"
-alias q=exit
-alias prettyjson="xargs -0 node -e \"console.log(require('util').inspect(JSON.parse(process.argv[1]), { colors: true }))\""
-alias vim=nvim
-
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 autoload -Uz compinit; compinit
@@ -33,5 +27,16 @@ eval "$(fzf --zsh)"
 
 # abbr
 source /usr/local/share/zsh-abbr/zsh-abbr.zsh
+abbr -S -q g='git'
+abbr -S -q gs='git status'
+abbr -S -q gd='git diff'
+abbr -S -q gc='git commit'
+abbr -S -q gca='git commit --amend'
+abbr -S -q n='npm run'
+abbr -S -q k='kubectl'
+abbr -S -q c='clear'
 
-abbr -S g=git
+# alias
+alias vim='nvim'
+alias prettyjson="xargs -0 node -e \"console.log(require('util').inspect(JSON.parse(process.argv[1]), { colors: true }))\""
+
