@@ -1,3 +1,6 @@
+# Remove 'Last Login' message
+printf '\33c\e[3J'
+
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 autoload -Uz compinit; compinit
