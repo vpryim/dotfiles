@@ -28,6 +28,8 @@ zstyle :prompt:pure:path color '#5ac289'
 zstyle :prompt:pure:prompt:success color '#ffb700'
 
 # pure
+PURE_PROMPT_SYMBOL='❯❯❯'
+PURE_PROMPT_VICMD_SYMBOL='❮❮❮'
 prompt pure
 
 # fzf
