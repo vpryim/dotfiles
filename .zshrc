@@ -23,6 +23,7 @@ setopt hist_find_no_dups
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' menu select
 
 # https://github.com/sindresorhus/pure?tab=readme-ov-file#colors
 zstyle :prompt:pure:path color '#5ac289'
