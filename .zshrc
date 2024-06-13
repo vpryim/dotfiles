@@ -75,6 +75,7 @@ abbr -S -q mcu='mdl create-user'
 abbr -S -q mcc='mdl create-corp'
 abbr -S -q ll='ls -ll'
 abbr -S -q la='ls -la'
+abbr -S -q zshrc='nvim ~/.zshrc'
 
 # alias
 alias vim='nvim'
