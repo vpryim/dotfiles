@@ -68,7 +68,8 @@ abbr -S -q c='clear'
 abbr -S -q m='mdl'
 abbr -S -q mu='mdl run-user'
 abbr -S -q mc='mdl run-corp'
-abbr -S -q ll='ls -la'
+abbr -S -q ll='ls -ll'
+abbr -S -q la='ls -la'
 
 # alias
 alias vim='nvim'
