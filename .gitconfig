@@ -2,4 +2,4 @@
   path = ~/.gitconfig.local
 
 [pretty]
-  pink = "%C(#666666)%h%Creset %s %C(#ff69b4)%an%Creset %C(#666666)(%cr)%d%C(reset)"
+  pink = "%C(#666666)%h%Creset %s %C(#ff69b4)%an%Creset%C(yellow)%d%Creset %C(#666666)%cr%C(reset)"
