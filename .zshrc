@@ -46,6 +46,11 @@ bindkey -v
 bindkey "^H" backward-delete-char
 bindkey "^?" backward-delete-char
 
+# Edit current line in vim
+autoload -U edit-command-line
+bindkey '^e' edit-command-line
+zle -N edit-command-line
+
 # abbr
 source /usr/local/share/zsh-abbr/zsh-abbr.zsh
 abbr -S -q g='git'
