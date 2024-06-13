@@ -2,6 +2,7 @@
 printf '\33c\e[3J'
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export EDITOR=nvim
 
 autoload -Uz compinit; compinit
 autoload -U promptinit; promptinit
