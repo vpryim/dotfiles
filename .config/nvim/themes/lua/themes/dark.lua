@@ -138,15 +138,17 @@ local groups = {
 }
 
 local colors_l = {
+  lime   = '#5ac289',
+  amber  = '#ffb700',
   blue   = '#80a0ff',
   cyan   = '#79dac8',
   black  = '#000000',
   white  = '#e2e2e2',
-  red    = '#ff5189',
+  pink   = '#ff5189',
   violet = '#d183e8',
   grey0  = '#161616',
-  grey   = '#c73414',
-  -- grey   = '#303030',
+  red    = '#c73414',
+  grey   = '#303030',
   grey3  = '#b6b6b6',
   dark   = '#16161D',
   yellow = '#ffb700',
@@ -154,14 +156,14 @@ local colors_l = {
 
 local lualine_theme = {
   normal = {
-    a = { fg = colors_l.white, bg = colors_l.grey },
-    b = { fg = colors_l.white, bg = colors_l.grey },
-    c = { fg = colors_l.white, bg = colors_l.grey },
+    a = { fg = colors_l.white, bg = colors_l.red },
+    b = { fg = colors_l.white, bg = colors_l.red },
+    c = { fg = colors_l.white, bg = colors_l.red },
   },
 
-  insert = { a = { fg = colors_l.black, bg = colors_l.blue } },
-  visual = { a = { fg = colors_l.black, bg = colors_l.cyan } },
-  replace = { a = { fg = colors_l.black, bg = colors_l.red } },
+  -- insert = { b = { fg = colors_l.black, bg = colors_l.blue } },
+  -- visual = { b = { fg = colors_l.black, bg = colors_l.lime } },
+  -- replace = { b = { fg = colors_l.black, bg = colors_l.red } },
 
   inactive = {
     a = { fg = colors_l.grey3, bg = colors_l.grey0 },
