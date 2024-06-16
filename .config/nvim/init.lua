@@ -81,6 +81,15 @@ require('lazy').setup({
     opts = {
       -- add any custom options here
     }
+  },
+
+  {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require('vpryim.harpoon')
+    end
   }
 })
 

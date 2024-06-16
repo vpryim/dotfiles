@@ -48,13 +48,10 @@ telescope.setup({
     },
   }
 })
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Find files' })
-vim.keymap.set('n', '<leader><space>', builtin.find_files, { desc = 'Find files' })
-vim.keymap.set('n', '<D-p>', builtin.find_files, { desc = 'Find files' })
+vim.keymap.set('n', '<leader>lf', builtin.find_files, { desc = 'Find files' })
 vim.keymap.set('n', '<leader>lg', builtin.live_grep, { desc = 'Live grep' })
 vim.keymap.set('n', '<leader>lb', builtin.buffers, { desc = 'List buffers' })
 vim.keymap.set('n', '<leader>lr', builtin.registers, { desc = 'List registers' })
 vim.keymap.set('n', '<leader>lc', builtin.git_commits, { desc = 'List commits (git)' })
 vim.keymap.set('n', '<leader>ls', vim.cmd.Ex, { desc = 'List files' })
--- vim.keymap.set('n', '<leader>lg', builtin.git_files, { desc = 'List git files' })
 vim.keymap.set('n', '<leader>lo', builtin.oldfiles, { desc = 'List recently opened files' })
