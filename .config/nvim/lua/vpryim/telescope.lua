@@ -48,7 +48,7 @@ telescope.setup({
     },
   }
 })
-vim.keymap.set('n', '<leader>lf', builtin.find_files, { desc = 'Find files' })
+vim.keymap.set('n', '<leader><space>', builtin.find_files, { desc = 'Find files' })
 vim.keymap.set('n', '<leader>lg', builtin.live_grep, { desc = 'Live grep' })
 vim.keymap.set('n', '<leader>lb', builtin.buffers, { desc = 'List buffers' })
 vim.keymap.set('n', '<leader>lr', builtin.registers, { desc = 'List registers' })
