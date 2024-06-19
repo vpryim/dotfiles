@@ -6,6 +6,8 @@ vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Find next' })
 vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Find prev' })
 vim.keymap.set('n', '<leader>\\', ':vsplit<Return><C-w>l', { desc = 'Split window' })
 vim.keymap.set('n', '<D-,>', ':edit ~/.config/nvim/init.lua<CR>', { desc = 'Open settings', silent = true })
+vim.keymap.set('x', '<leader>p', [["_dP]], { desc = "Paste without changing register", silent = true })
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without changing register" })
 
 -- vim.keymap.set('n', 'x', '"_x')
 -- vim.keymap.set('n', 'd', '"_d')
