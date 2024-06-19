@@ -5,8 +5,6 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Page up' })
 vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Find next' })
 vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Find prev' })
 vim.keymap.set('n', '<leader>\\', ':vsplit<Return><C-w>l', { desc = 'Split window' })
-vim.keymap.set('x', '<leader>p', [["_dP]], { desc = "Paste without changing register", silent = true })
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without changing register" })
 
 -- persistence
 vim.keymap.set("n", "<leader>qs", function() require("persistence").load() end,
