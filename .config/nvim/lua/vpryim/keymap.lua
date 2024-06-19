@@ -9,19 +9,10 @@ vim.keymap.set('n', '<D-,>', ':edit ~/.config/nvim/init.lua<CR>', { desc = 'Open
 vim.keymap.set('x', '<leader>p', [["_dP]], { desc = "Paste without changing register", silent = true })
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without changing register" })
 
--- vim.keymap.set('n', 'x', '"_x')
--- vim.keymap.set('n', 'd', '"_d')
--- vim.keymap.set('n', 'D', '"_D')
--- vim.keymap.set('v', 'd', '"_d')
--- vim.keymap.set('n', '<leader>d', '""d')
--- vim.keymap.set('n', '<leader>D', '""D')
--- vim.keymap.set('v', '<leader>d', '""d')
-
--- restore the session for the current directory
-vim.api.nvim_set_keymap("n", "<leader>qs", [[<cmd>lua require("persistence").load()<cr>]], {})
-
--- restore the last session
-vim.api.nvim_set_keymap("n", "<leader>ql", [[<cmd>lua require("persistence").load({ last = true })<cr>]], {})
-
--- stop Persistence => session won't be saved on exit
-vim.api.nvim_set_keymap("n", "<leader>qd", [[<cmd>lua require("persistence").stop()<cr>]], {})
+-- persistence
+vim.keymap.set("n", "<leader>qs", function() require("persistence").load() end,
+  { desc = "Restore the session for the current directory" })
+vim.keymap.set("n", "<leader>ql", function() require("persistence").load({ last = true }) end,
+  { desc = "Restore the last session" })
+vim.keymap.set("n", "<leader>qd", function() require("persistence").stop() end,
+  { desc = "Stop persistence => session won't be saved on exit" })
