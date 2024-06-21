@@ -5,6 +5,7 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Page up' })
 vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Find next' })
 vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Find prev' })
 vim.keymap.set('n', '<leader>\\', ':vsplit<Return><C-w>l', { desc = 'Split window' })
+vim.keymap.set('n', 'sv', ':vsplit<Return><C-w>l', { desc = 'Split vertically' })
 
 -- persistence
 vim.keymap.set("n", "<leader>qs", function() require("persistence").load() end,
