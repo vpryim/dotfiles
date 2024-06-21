@@ -4,7 +4,6 @@ telescope.load_extension "frecency"
 telescope.setup({
   defaults = {
     file_ignore_patterns = {
-      ".git",
       "node_modules"
     },
     layout_config = {
@@ -47,18 +46,23 @@ telescope.setup({
   extensions = {
     frecency = {
       ignore_patterns = { "*.git/*", "*node_modules/*" },
-    },
-  }
-})
-vim.keymap.set('n', '<C-p>', function()
-    telescope.extensions.frecency.frecency({
       workspace = "CWD",
       path_display = { "tail" },
       prompt_title = "Test",
       theme = "dropdown"
-    })
-  end,
-  { desc = 'Find files' })
+    },
+  }
+})
+-- vim.keymap.set('n', '<C-p>', function()
+--     telescope.extensions.frecency.frecency({
+--       workspace = "CWD",
+--       path_display = { "tail" },
+--       prompt_title = "Test",
+--       theme = "dropdown"
+--     })
+--   end,
+--   { desc = 'Find files' })
+vim.keymap.set('n', '<C-p>', builtin.find_files, { desc = 'Find files' })
 vim.keymap.set('n', '<leader>lg', builtin.live_grep, { desc = 'Live grep' })
 vim.keymap.set('n', '<leader>lb', builtin.buffers, { desc = 'List buffers' })
 vim.keymap.set('n', '<leader>lr', builtin.registers, { desc = 'List registers' })
