@@ -159,6 +159,7 @@ local lualine_theme = {
     a = { fg = colors_l.white, bg = colors_l.red },
     b = { fg = colors_l.white, bg = colors_l.red },
     c = { fg = colors_l.white, bg = colors_l.red },
+
   },
 
   -- insert = { b = { fg = colors_l.black, bg = colors_l.blue } },
@@ -166,9 +167,9 @@ local lualine_theme = {
   -- replace = { b = { fg = colors_l.black, bg = colors_l.red } },
 
   inactive = {
-    a = { fg = colors_l.grey3, bg = colors_l.grey0 },
-    b = { fg = colors_l.grey3, bg = colors_l.grey0 },
-    c = { fg = colors_l.grey3, bg = colors_l.grey0 },
+    a = { fg = colors_l.grey0, bg = colors_l.grey3 },
+    b = { fg = colors_l.grey0, bg = colors_l.grey3 },
+    c = { fg = colors_l.grey0, bg = colors_l.grey3 },
   },
 }
 
