@@ -14,9 +14,8 @@ vim.keymap.set("n", "<leader>qd", function() require("persistence").stop() end,
   { desc = "Stop persistence => session won't be saved on exit" })
 
 -- split
-vim.keymap.set('n', '<leader>\\', ':vsplit<Return><C-w>l', { desc = 'Split window' })
-vim.keymap.set('n', 'ss', ':split<CR><C-w>j')
-vim.keymap.set('n', 'sv', ':vsplit<CR><C-w>l')
+vim.keymap.set('n', 'ss', ':split<CR>')
+vim.keymap.set('n', 'sv', ':vsplit<CR>')
 vim.keymap.set('n', 'sh', '<C-w>h')
 vim.keymap.set('n', 'sj', '<C-w>j')
 vim.keymap.set('n', 'sk', '<C-w>k')

@@ -10,3 +10,5 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.termguicolors = true
 vim.opt.background = 'dark'
+vim.opt.splitright = true
+vim.opt.splitbelow = true
