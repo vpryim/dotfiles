@@ -52,6 +52,10 @@ autoload -U edit-command-line
 bindkey '^e' edit-command-line
 zle -N edit-command-line
 
+# Remap fzf file widget to Ctrl+P
+bindkey -r '^T'
+bindkey '^P' fzf-file-widget
+
 # abbr
 source /usr/local/share/zsh-abbr/zsh-abbr.zsh
 abbr -S -q g='git'
