@@ -11,14 +11,17 @@ telescope.setup({
     },
     sorting_strategy = 'ascending',
     results_title = false,
-    preview = false
+    preview = false,
+    path_display = { "smart" },
   },
   pickers = {
     find_files = {
       theme = 'dropdown',
     },
     live_grep = {
-      theme = 'dropdown',
+      preview = true
+    },
+    grep_string = {
       preview = true
     },
     git_files = {
@@ -66,6 +69,6 @@ vim.keymap.set('n', '<C-p>', builtin.find_files, { desc = 'Find files' })
 vim.keymap.set('n', '<leader>lg', builtin.live_grep, { desc = 'Live grep' })
 vim.keymap.set('n', '<leader>lb', builtin.buffers, { desc = 'List buffers' })
 vim.keymap.set('n', '<leader>lr', builtin.registers, { desc = 'List registers' })
-vim.keymap.set('n', '<leader>lc', builtin.git_commits, { desc = 'List commits (git)' })
+vim.keymap.set('n', '<leader>lc', builtin.grep_string, { desc = 'List string under cursor' })
 vim.keymap.set('n', '<leader>ls', vim.cmd.Ex, { desc = 'List files' })
 vim.keymap.set('n', '<leader>lo', builtin.oldfiles, { desc = 'List recently opened files' })

@@ -10,3 +10,10 @@ git clone git@github.com:vpryim/dotfiles.git
 cd dotfiles
 stow .
 ```
+
+## Disable MacOS lang popup
+
+```
+sudo mkdir -p /Library/Preferences/FeatureFlags/Domain
+sudo /usr/libexec/PlistBuddy -c "Add 'redesigned_text_cursor:Enabled' bool false" /Library/Preferences/FeatureFlags/Domain/UIKit.plist
+```
