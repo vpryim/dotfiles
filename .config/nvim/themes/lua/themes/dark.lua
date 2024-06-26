@@ -138,38 +138,50 @@ local groups = {
 }
 
 local colors_l = {
-  lime   = '#5ac289',
-  amber  = '#ffb700',
-  blue   = '#80a0ff',
-  cyan   = '#79dac8',
-  black  = '#000000',
-  white  = '#e2e2e2',
-  pink   = '#ff5189',
-  violet = '#d183e8',
-  grey0  = '#161616',
-  red    = '#c73414',
-  grey   = '#303030',
-  grey3  = '#b6b6b6',
-  dark   = '#16161D',
-  yellow = '#ffb700',
+  lime       = '#5ac289',
+  lime_dark  = '#0C1F15',
+  amber      = '#ffb700',
+  amber_dark = '#2D2000',
+  blue       = '#80a0ff',
+  blue_dark  = '#02113F',
+  cyan       = '#79dac8',
+  black      = '#000000',
+  white      = '#e2e2e2',
+  pink       = '#ff5189',
+  violet     = '#d183e8',
+  grey0      = '#161616',
+  red        = '#c73414',
+  grey       = '#303030',
+  grey3      = '#b6b6b6',
+  dark       = '#16161D',
+  yellow     = '#ffb700',
 }
 
 local lualine_theme = {
   normal = {
-    a = { fg = colors_l.white, bg = colors_l.red },
-    b = { fg = colors_l.white, bg = colors_l.red },
-    c = { fg = colors_l.white, bg = colors_l.red },
-
+    a = { fg = colors_l.lime, bg = colors_l.black },
+    b = { fg = colors_l.lime, bg = colors_l.black },
+    c = { fg = colors_l.lime, bg = colors_l.black },
   },
-
-  -- insert = { b = { fg = colors_l.black, bg = colors_l.blue } },
-  -- visual = { b = { fg = colors_l.black, bg = colors_l.lime } },
-  -- replace = { b = { fg = colors_l.black, bg = colors_l.red } },
-
+  insert = {
+    a = { fg = colors_l.amber, bg = colors_l.black },
+    b = { fg = colors_l.amber, bg = colors_l.black },
+    c = { fg = colors_l.amber, bg = colors_l.black },
+  },
+  visual = {
+    a = { fg = colors_l.blue, bg = colors_l.black },
+    b = { fg = colors_l.blue, bg = colors_l.black },
+    c = { fg = colors_l.blue, bg = colors_l.black },
+  },
+  command = {
+    a = { fg = colors_l.pink, bg = colors_l.black },
+    b = { fg = colors_l.pink, bg = colors_l.black },
+    c = { fg = colors_l.pink, bg = colors_l.black },
+  },
   inactive = {
-    a = { fg = colors_l.grey0, bg = colors_l.grey3 },
-    b = { fg = colors_l.grey0, bg = colors_l.grey3 },
-    c = { fg = colors_l.grey0, bg = colors_l.grey3 },
+    a = { fg = colors_l.grey3, bg = colors_l.black },
+    b = { fg = colors_l.grey3, bg = colors_l.black },
+    c = { fg = colors_l.grey3, bg = colors_l.black },
   },
 }
 
