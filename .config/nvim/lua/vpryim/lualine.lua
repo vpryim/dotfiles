@@ -13,29 +13,29 @@ require('lualine').setup {
   sections = {
     lualine_a = {
       { 'mode', fmt = function() return '●' end },
-      -- { 'branch' },
     },
     -- lualine_b = { 'filename', { 'branch', color = { fg = colors.white } } },
     -- lualine_b = { { 'branch', separator = '→' }, { 'filename', path = 1 }, { 'location' } },
     lualine_b = {
       { 'filename', path = 1 },
-      { 'branch',   fmt = function(b) return '(' .. b .. ')' end }
+      { 'branch', fmt = function(b)
+        if b == ''
+        then
+          return ''
+        else
+          return '(' .. b .. ')'
+        end
+      end }
     },
     lualine_c = {},
     lualine_x = {
-      -- { 'branch' }
+      { 'mode', fmt = function(str) if str == 'NORMAL' then return '' else return '-- ' .. str .. ' --' end end },
     },
     lualine_y = {
-      --   'progress'
       { 'diagnostics', colored = false },
-      -- 'location'
     },
     lualine_z = {
-      {
-        'location',
-        --  separator = { left = '•' },
-        --    color = { fg = palette_colors.oldWhite, bg = palette_colors.sumiInk0 }
-      },
+      'location',
     },
   },
   inactive_sections = {

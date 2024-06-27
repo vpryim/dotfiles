@@ -11,6 +11,7 @@ local colors = {
   blue   = '#52de97',
   green  = '#79dcaa',
   red    = '#f87070',
+  pink   = '#ff5189',
 }
 
 local groups = {
@@ -29,11 +30,11 @@ local groups = {
   Comment = { fg = colors.gray0 },
   SpecialComment = { fg = colors.gray0 },
 
-  -- Lines                  , Columns
+  -- Lines, Columns
   LineNr = { fg = colors.gray0 },
-  CursorLine = { bg = colors.gray3 },
-  CursorLineNr = { fg = colors.light, bg = colors.gray3 },
-  SignColumn = { fg = colors.gray3, bg = colors.dark },
+  CursorLine = { bg = colors.grey3 },
+  CursorLineNr = { fg = colors.light, bg = colors.grey3 },
+  SignColumn = { fg = colors.grey3, bg = colors.dark },
   ColorColumn = { fg = colors.light, bg = colors.gray3 },
   CursorColumn = { fg = colors.light, bg = colors.gray3 },
 
@@ -84,7 +85,7 @@ local groups = {
 
   -- Misc
   Normal = { fg = colors.light, bg = colors.dark },
-  Cursor = { fg = colors.dark, bg = colors.light },
+  Cursor = { fg = colors.light, bg = colors.pink },
   Underlined = { fg = colors.light, underline = true },
   SpecialKey = { fg = colors.light },
   NonText = { fg = colors.light },
@@ -155,28 +156,35 @@ local colors_l = {
   grey3      = '#b6b6b6',
   dark       = '#16161D',
   yellow     = '#ffb700',
+  green      = '#79dcaa',
 }
 
 local lualine_theme = {
   normal = {
-    a = { fg = colors_l.lime, bg = colors_l.black },
-    b = { fg = colors_l.lime, bg = colors_l.black },
-    c = { fg = colors_l.lime, bg = colors_l.black },
-  },
-  insert = {
-    a = { fg = colors_l.amber, bg = colors_l.black },
-    b = { fg = colors_l.amber, bg = colors_l.black },
-    c = { fg = colors_l.amber, bg = colors_l.black },
-  },
-  visual = {
-    a = { fg = colors_l.blue, bg = colors_l.black },
-    b = { fg = colors_l.blue, bg = colors_l.black },
-    c = { fg = colors_l.blue, bg = colors_l.black },
-  },
-  command = {
     a = { fg = colors_l.pink, bg = colors_l.black },
     b = { fg = colors_l.pink, bg = colors_l.black },
     c = { fg = colors_l.pink, bg = colors_l.black },
+    x = { fg = colors_l.pink, bg = colors_l.black },
+    y = { fg = colors_l.pink, bg = colors_l.black },
+    z = { fg = colors_l.pink, bg = colors_l.black },
+  },
+  insert = {
+    -- a = { fg = colors_l.amber, bg = colors_l.black },
+    --   b = { fg = colors_l.amber, bg = colors_l.black },
+    --   c = { fg = colors_l.amber, bg = colors_l.black },
+    x = { fg = colors_l.green, bg = colors_l.black },
+  },
+  visual = {
+    -- a = { fg = colors_l.green, bg = colors_l.black },
+    --   b = { fg = colors_l.blue, bg = colors_l.black },
+    --   c = { fg = colors_l.blue, bg = colors_l.black },
+    x = { fg = colors_l.green, bg = colors_l.black },
+  },
+  command = {
+    -- a = { fg = colors_l.blue, bg = colors_l.black },
+    --   b = { fg = colors_l.pink, bg = colors_l.black },
+    --   c = { fg = colors_l.pink, bg = colors_l.black },
+    x = { fg = colors_l.green, bg = colors_l.black },
   },
   inactive = {
     a = { fg = colors_l.grey3, bg = colors_l.black },

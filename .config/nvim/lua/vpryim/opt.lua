@@ -13,3 +13,4 @@ vim.opt.background = 'dark'
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.signcolumn = 'number'
+vim.opt.showmode = false
