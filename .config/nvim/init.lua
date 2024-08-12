@@ -38,7 +38,6 @@ require('lazy').setup({
     branch = '0.1.x',
     dependencies = {
       'nvim-lua/plenary.nvim',
-      'nvim-telescope/telescope-frecency.nvim',
     },
     config = function()
       require('vpryim.telescope')
@@ -99,8 +98,22 @@ require('lazy').setup({
     config = function()
       require("nvim-surround").setup()
     end
+  },
+
+  {
+    "dmmulroy/tsc.nvim",
+    config = function()
+      require('tsc').setup()
+    end
   }
 })
 
 require('vpryim.opt')
 require('vpryim.keymap')
+
+local augroup = vim.api.nvim_create_augroup("strdr4605", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "typescript,typescriptreact",
+  group = augroup,
+  command = "compiler tsc | setlocal makeprg=npx\\ tsc\\ --noEmit\\ --pretty\\ false",
+})

@@ -1,6 +1,5 @@
 local telescope = require('telescope')
 local builtin = require('telescope.builtin')
-telescope.load_extension "frecency"
 telescope.setup({
   defaults = {
     file_ignore_patterns = {
@@ -45,26 +44,8 @@ telescope.setup({
     lsp_references = {
       preview = true,
     },
-  },
-  extensions = {
-    frecency = {
-      ignore_patterns = { "*.git/*", "*node_modules/*" },
-      workspace = "CWD",
-      path_display = { "tail" },
-      prompt_title = "Test",
-      theme = "dropdown"
-    },
   }
 })
--- vim.keymap.set('n', '<C-p>', function()
---     telescope.extensions.frecency.frecency({
---       workspace = "CWD",
---       path_display = { "tail" },
---       prompt_title = "Test",
---       theme = "dropdown"
---     })
---   end,
---   { desc = 'Find files' })
 vim.keymap.set('n', '<C-p>', builtin.find_files, { desc = 'Find files' })
 vim.keymap.set('n', '<leader>lg', builtin.live_grep, { desc = 'Live grep' })
 vim.keymap.set('n', '<leader>lw', builtin.grep_string, { desc = 'Grep string' })
