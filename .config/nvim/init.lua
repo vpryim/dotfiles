@@ -1,6 +1,11 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Setup path
+local home_dir = os.getenv("HOME")
+package.path = home_dir .. "/.config/nvim/?.lua;" .. package.path
+
+-- Setup lazy
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system {
@@ -15,13 +20,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-  {
-    dir = '~/.config/nvim/themes',
-    config = function()
-      vim.cmd.colorscheme('vpryim')
-    end
-  },
-
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -46,10 +44,6 @@ require('lazy').setup({
 
   {
     'nvim-lualine/lualine.nvim',
-    -- dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
-      require('vpryim.lualine')
-    end
   },
 
   {
@@ -105,15 +99,25 @@ require('lazy').setup({
     config = function()
       require('tsc').setup()
     end
-  }
+  },
+
+  {
+    'MeanderingProgrammer/render-markdown.nvim',
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+    opts = {},
+  },
 })
 
 require('vpryim.opt')
 require('vpryim.keymap')
 
+-- Setup typescript plugin
 local augroup = vim.api.nvim_create_augroup("strdr4605", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "typescript,typescriptreact",
   group = augroup,
   command = "compiler tsc | setlocal makeprg=npx\\ tsc\\ --noEmit\\ --pretty\\ false",
 })
+
+-- Setup color scheme
+vim.cmd.colorscheme('vpryim')
