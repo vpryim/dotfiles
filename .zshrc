@@ -90,3 +90,5 @@ alias prettyjson="xargs -0 node -e \"console.log(require('util').inspect(JSON.pa
 # autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+export WASMTIME_HOME="$HOME/.wasmtime"
+export PATH="$WASMTIME_HOME/bin:$PATH"
