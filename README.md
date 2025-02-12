@@ -17,3 +17,9 @@ stow .
 sudo mkdir -p /Library/Preferences/FeatureFlags/Domain
 sudo /usr/libexec/PlistBuddy -c "Add 'redesigned_text_cursor:Enabled' bool false" /Library/Preferences/FeatureFlags/Domain/UIKit.plist
 ```
+
+## Disable font smoothing
+
+```
+defaults -currentHost write -g AppleFontSmoothing -int 0
+```
