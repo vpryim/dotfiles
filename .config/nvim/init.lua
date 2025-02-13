@@ -104,8 +104,20 @@ require('lazy').setup({
   {
     'MeanderingProgrammer/render-markdown.nvim',
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
-    opts = {},
+    opts = {
+      bullet = {
+        icons = { '•', '○', '◆', '◇' },
+        left_pad = 2,
+      },
+      checkbox = {
+        position = 'overlay',
+      },
+    },
   },
+
+  {
+    "nyoom-engineering/oxocarbon.nvim"
+  }
 })
 
 require('vpryim.opt')
