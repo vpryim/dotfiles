@@ -57,7 +57,7 @@ bindkey -r '^T'
 bindkey '^P' fzf-file-widget
 
 # abbr
-source /usr/local/share/zsh-abbr/zsh-abbr.zsh
+source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
 abbr -S -q g='git'
 abbr -S -q ga='git add .'
 abbr -S -q gs='git status'
@@ -88,7 +88,7 @@ alias ..='cd ..'
 alias prettyjson="xargs -0 node -e \"console.log(require('util').inspect(JSON.parse(process.argv[1]), { depth: 4, colors: true }))\""
 
 # autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export WASMTIME_HOME="$HOME/.wasmtime"
 export PATH="$WASMTIME_HOME/bin:$PATH"
