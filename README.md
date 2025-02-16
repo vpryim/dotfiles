@@ -26,4 +26,8 @@ defaults -currentHost write -g AppleFontSmoothing -int 0
 
 ## Install ukrainian typography keyboard layout
 
+```
+cp -R ~/dotfiles/ukrainian-typography.bundle ~/Library/Keyboard\ Layouts
+```
+
 https://github.com/AntonShevchuk/ukrainian-typography-keyboard-layout
