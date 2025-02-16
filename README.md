@@ -23,3 +23,7 @@ sudo /usr/libexec/PlistBuddy -c "Add 'redesigned_text_cursor:Enabled' bool false
 ```
 defaults -currentHost write -g AppleFontSmoothing -int 0
 ```
+
+## Install ukrainian typography keyboard layout
+
+https://github.com/AntonShevchuk/ukrainian-typography-keyboard-layout
