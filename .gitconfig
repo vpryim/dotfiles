@@ -6,3 +6,5 @@
 
 [alias]
   undo = reset --soft HEAD^
+[core]
+	excludesfile = /Users/vpryim/.config/git/ignore
