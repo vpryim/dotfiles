@@ -2,7 +2,7 @@ local colors
 
 if vim.o.background == 'dark' then
   colors = {
-    text   = '#d4d4d5',
+    text   = '#e6e6e6',
     dark   = '#090909',
     black  = '#000000',
     gray0  = '#666666',
@@ -140,7 +140,7 @@ local groups_dark = {
   PmenuThumb = { fg = colors.dark, bg = colors.text },
 
   -- Split
-  VertSplit = { fg = colors.gray1, bg = colors.dark, bold = true },
+  VertSplit = { fg = colors.amber, bg = colors.dark, bold = true },
   WinSeparator = { fg = colors.gray1, bg = colors.dark, bold = true },
 
   -- Others
