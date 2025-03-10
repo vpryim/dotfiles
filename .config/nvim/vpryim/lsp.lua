@@ -1,7 +1,7 @@
 require("mason").setup()
 
 local servers = {
-  tsserver = {},
+  ts_ls = {},
   tailwindcss = {},
   html = {},
   jsonls = {},
