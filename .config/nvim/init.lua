@@ -114,10 +114,6 @@ require('lazy').setup({
       },
     },
   },
-
-  {
-    "nyoom-engineering/oxocarbon.nvim"
-  }
 })
 
 require('vpryim.opt')
