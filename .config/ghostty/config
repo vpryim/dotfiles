@@ -1,7 +1,35 @@
 font-family = Monaco
 font-size = 14
-adjust-cell-height = 10%
-cursor-color = ff5189
+adjust-cell-height = 5%
 
+palette = 0=#000000
+palette = 1=#ff5555
+palette = 2=#55ff55
+palette = 3=#ffb700
+palette = 4=#5555ff
+palette = 5=#ff55ff
+palette = 6=#55ffff
+palette = 7=#bbbbbb
+
+# palette = 8=#555555
+
+palette = 9=#ff5555
+palette = 10=#55ff55
+palette = 11=#ffff55
+palette = 12=#5555ff
+palette = 13=#ff55ff
+palette = 14=#55ffff
+palette = 15=#f2f2f2
+selection-background = b5d5ff
+selection-foreground = 000000
 background = 090909
-foreground = e7e7e7
+foreground = e6e6e6
+
+cursor-color = ff5189
+cursor-text = 090909
+cursor-style-blink = false
+shell-integration-features = no-cursor
+unfocused-split-opacity = 0.8
+background-opacity = 1
+window-padding-x = 12
+minimum-contrast = 3
