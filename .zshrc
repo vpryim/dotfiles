@@ -57,7 +57,14 @@ bindkey -r '^T'
 bindkey '^P' fzf-file-widget
 
 # abbr
-source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
+# Check for the existence of the zsh-abbr.zsh file in both locations
+if [ -f /usr/local/share/zsh-abbr/zsh-abbr.zsh ]; then
+    source /usr/local/share/zsh-abbr/zsh-abbr.zsh
+elif [ -f /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh ]; then
+    source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
+else
+    echo "zsh-abbr.zsh not found in either location."
+fi
 abbr -S -q g='git'
 abbr -S -q ga='git add .'
 abbr -S -q gs='git status'
@@ -88,7 +95,14 @@ alias ..='cd ..'
 alias prettyjson="xargs -0 node -e \"console.log(require('util').inspect(JSON.parse(process.argv[1]), { depth: 4, colors: true }))\""
 
 # autosuggestions
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Check for the existence of the zsh-abbr.zsh file in both locations
+if [ -f /usr/local/share/zsh-abbr/zsh-abbr.zsh ]; then
+    source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+elif [ -f /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh ]; then
+    source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+else
+    echo "zsh-abbr.zsh not found in either location."
+fi
 
 export WASMTIME_HOME="$HOME/.wasmtime"
 export PATH="$WASMTIME_HOME/bin:$PATH"
