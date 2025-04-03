@@ -1,7 +1,8 @@
 ## Requirements
 
-- `brew install git stow neovim tmux`
-- `brew install zsh pure fzf zsh-completions zsh-autosuggestions olets/tap/zsh-abbr ripgrep`
+- `brew install git stow tmux`
+- `brew install neovim ripgrep fd`
+- `brew install zsh pure fzf zsh-completions zsh-autosuggestions olets/tap/zsh-abbr`
 
 ## Installation
 
