@@ -34,17 +34,13 @@ require('lazy').setup({
   {
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-    },
+    dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
       require('vpryim.telescope')
     end
   },
 
-  {
-    'nvim-lualine/lualine.nvim',
-  },
+  { 'nvim-lualine/lualine.nvim' },
 
   {
     'numToStr/Comment.nvim',
