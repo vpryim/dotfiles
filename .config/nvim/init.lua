@@ -89,20 +89,6 @@ require('lazy').setup({
   },
 
   {
-    'MeanderingProgrammer/render-markdown.nvim',
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
-    opts = {
-      bullet = {
-        icons = { '•', '○', '◆', '◇' },
-        left_pad = 2,
-      },
-      checkbox = {
-        position = 'overlay',
-      },
-    },
-  },
-
-  {
     "hrsh7th/nvim-cmp",
     config = function()
       require('vpryim.cmp')
