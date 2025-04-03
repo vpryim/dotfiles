@@ -14,3 +14,5 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.signcolumn = 'number'
 vim.opt.showmode = false
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
