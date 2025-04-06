@@ -89,16 +89,25 @@ require('lazy').setup({
   },
 
   {
-    "hrsh7th/nvim-cmp",
+    "L3MON4D3/LuaSnip",
+    version = "v2.*",
     config = function()
-      require('vpryim.cmp')
       require('vpryim.luasnip')
-    end,
-    dependencies = {
-      { "L3MON4D3/LuaSnip",        version = "v2.*" },
-      { "saadparwaiz1/cmp_luasnip" }
-    }
-  }
+      require('vpryim.snippets')
+    end
+  },
+
+  -- {
+  --   "hrsh7th/nvim-cmp",
+  --   config = function()
+  --     require('vpryim.cmp')
+  --     require('vpryim.luasnip')
+  --   end,
+  --   dependencies = {
+  --     { "L3MON4D3/LuaSnip",        version = "v2.*" },
+  --     { "saadparwaiz1/cmp_luasnip" }
+  --   }
+  -- },
 })
 
 

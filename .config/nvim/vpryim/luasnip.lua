@@ -1,27 +1,20 @@
-local ls = require("luasnip")
-ls.setup({
+local luasnip = require("luasnip")
+luasnip.setup({
   config = {
     enable_autosnippets = false,
   }
 })
-vim.keymap.set({ "i" }, "<C-I>", function()
-  if ls.expand_or_jumpable() then
-    ls.expand_or_jump()
+
+vim.keymap.set({ "i" }, "<Tab>", function()
+  if luasnip.expand_or_jumpable() then
+    luasnip.expand_or_jump()
+  else
+    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, true, true), "n", true)
   end
 end, { silent = true })
-local s = ls.snippet
-local t = ls.text_node
-local i = ls.insert_node
-local f = ls.function_node
-local intlf = s('intlf', {
-  t('intl.formatMessage({ defaultMessage: "'),
-  i(1, ""),
-  t('" })')
-})
-local intlu = s('intlu', {
-  t('const intl = useIntl()'),
-})
-ls.add_snippets("all", {
-  intlf,
-  intlu
-})
+
+vim.keymap.set({ "i" }, "<S-Tab>", function()
+  if (luasnip.jumpable(-1)) then
+    luasnip.jump(-1)
+  end
+end, { silent = true })
