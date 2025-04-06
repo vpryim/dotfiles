@@ -6,6 +6,7 @@ telescope.setup({
       "node_modules"
     },
     layout_config = {
+      horizontal = { width = 0.9 },
       prompt_position = 'top',
     },
     sorting_strategy = 'ascending',
@@ -44,6 +45,9 @@ telescope.setup({
     lsp_references = {
       preview = true,
     },
+    treesitter = {
+      theme = 'dropdown',
+    }
   }
 })
 vim.keymap.set('n', '<C-p>', builtin.find_files, { desc = 'Find files' })
