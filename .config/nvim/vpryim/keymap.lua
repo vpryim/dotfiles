@@ -52,5 +52,7 @@ local function toggle_wrap()
 end
 vim.keymap.set('n', '<leader>w', toggle_wrap, { noremap = true, silent = true })
 
-vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
-vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
+vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
