@@ -21,13 +21,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
   {
-    "neovim/nvim-lspconfig",
-    dependencies = {
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
-    },
+    "williamboman/mason.nvim",
     config = function()
-      require('vpryim.lsp')
+      require('mason').setup()
     end
   },
 
@@ -113,6 +109,7 @@ require('lazy').setup({
 
 require('vpryim.opt')
 require('vpryim.keymap')
+require('vpryim.lsp')
 
 -- Setup typescript plugin
 local augroup = vim.api.nvim_create_augroup("strdr4605", { clear = true })

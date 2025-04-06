@@ -1,28 +1,3 @@
-require("mason").setup()
-
-local servers = {
-  ts_ls = {},
-  tailwindcss = {},
-  html = {},
-  jsonls = {},
-  lua_ls = {
-    Lua = {
-      workspace = { checkThirdParty = false },
-      telemetry = { enable = false },
-      diagnostics = {
-        globals = {
-          "vim"
-        }
-      }
-    }
-  }
-}
-
-require("mason-lspconfig").setup({
-  ensure_installed = vim.tbl_keys(servers),
-  automatic_installation = false,
-})
-
 local on_attach = function(_, bufnr)
   local nmap = function(keys, func, desc)
     if desc then
@@ -62,13 +37,53 @@ local on_attach = function(_, bufnr)
   end, { desc = 'Format current buffer with LSP' })
 end
 
-require('mason-lspconfig').setup_handlers({
-  function(server_name)
-    require('lspconfig')[server_name].setup {
-      -- capabilities = capabilities,
-      on_attach = on_attach,
-      settings = servers[server_name],
-      filetypes = (servers[server_name] or {}).filetypes,
+vim.lsp.enable({ "ts_ls", "tailwindcss", "lua_ls" })
+
+vim.lsp.config("ts_ls", {
+  init_options = { hostInfo = "neovim" },
+  cmd = { 'typescript-language-server', '--stdio' },
+  filetypes = {
+    'javascript',
+    'javascriptreact',
+    'javascript.jsx',
+    'typescript',
+    'typescriptreact',
+    'typescript.tsx',
+  },
+  root_markers = { 'tsconfig.json', 'jsconfig.json', 'package.json', '.git' },
+  single_file_support = true,
+  on_attach = on_attach
+})
+
+vim.lsp.config("tailwindcss", {
+  cmd = { 'tailwindcss-language-server', '--stdio' },
+  filetypes = {
+    'javascript',
+    'javascriptreact',
+    'javascript.jsx',
+    'typescript',
+    'typescriptreact',
+    'typescript.tsx',
+  },
+  root_markers = { 'tsconfig.json', 'jsconfig.json', 'package.json', '.git' },
+  single_file_support = true,
+  on_attach = on_attach
+})
+
+vim.lsp.config("lua_ls", {
+  cmd = { 'lua-language-server' },
+  filetypes = { 'lua' },
+  root_markers = { ".luarc.json", ".luarc.jsonc" },
+  workspace = { checkThirdParty = false },
+  telemetry = { enable = false },
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = {
+          "vim"
+        }
+      },
     }
-  end,
+  },
+  on_attach = on_attach
 })
