@@ -84,26 +84,49 @@ require('lazy').setup({
     end
   },
 
-  {
-    "L3MON4D3/LuaSnip",
-    version = "v2.*",
-    config = function()
-      require('vpryim.luasnip')
-      require('vpryim.snippets')
-    end
-  },
-
   -- {
-  --   "hrsh7th/nvim-cmp",
+  --   "L3MON4D3/LuaSnip",
+  --   version = "v2.*",
   --   config = function()
-  --     require('vpryim.cmp')
   --     require('vpryim.luasnip')
-  --   end,
-  --   dependencies = {
-  --     { "L3MON4D3/LuaSnip",        version = "v2.*" },
-  --     { "saadparwaiz1/cmp_luasnip" }
-  --   }
+  --     require('vpryim.snippets')
+  --   end
   -- },
+
+  {
+    'saghen/blink.cmp',
+    dependencies = {
+      'L3MON4D3/LuaSnip',
+      version = 'v2.*',
+      config = function()
+        require('vpryim.luasnip')
+        require('vpryim.snippets')
+      end
+    },
+    version = '1.*',
+    opts = {
+      snippets = { preset = 'luasnip' },
+      keymap = {
+        preset = 'super-tab',
+        ['<C-space>'] = {},
+        ['<C-n>'] = { 'show', 'show_documentation', 'hide_documentation' },
+      },
+      appearance = {
+        nerd_font_variant = 'mono'
+      },
+      completion = {
+        documentation = { auto_show = false },
+        menu = { auto_show = false },
+        -- ghost_text = { enabled = true, show_with_menu = false },
+      },
+      sources = {
+        -- default = { 'lsp', 'path', 'snippets', 'buffer' },
+        default = { 'lsp', 'path', 'snippets' },
+      },
+      fuzzy = { implementation = "prefer_rust_with_warning" }
+    },
+    opts_extend = { "sources.default" },
+  },
 })
 
 
