@@ -5,7 +5,7 @@ luasnip.setup({
   }
 })
 
-vim.keymap.set({ "i" }, "<Tab>", function()
+vim.keymap.set({ "i" }, "<Right>", function()
   if luasnip.expand_or_jumpable() then
     luasnip.expand_or_jump()
   else
@@ -13,7 +13,7 @@ vim.keymap.set({ "i" }, "<Tab>", function()
   end
 end, { silent = true })
 
-vim.keymap.set({ "i" }, "<S-Tab>", function()
+vim.keymap.set({ "i" }, "<Left>", function()
   if (luasnip.jumpable(-1)) then
     luasnip.jump(-1)
   end

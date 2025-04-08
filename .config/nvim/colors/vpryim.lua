@@ -136,12 +136,12 @@ local groups_dark = {
   -- Popup Menu
   Pmenu = { fg = colors.dark, bg = colors.gray3 },
   PmenuSbar = { fg = colors.dark, bg = colors.gray3 },
-  PmenuSel = { fg = colors.dark, bg = colors.gray0 },
+  PmenuSel = { fg = colors.text, bg = colors.gray0 },
   PmenuThumb = { fg = colors.dark, bg = colors.gray3 },
 
   -- Split
   VertSplit = { fg = colors.amber, bg = colors.dark, bold = true },
-  WinSeparator = { fg = colors.gray1, bg = colors.dark, bold = true },
+  WinSeparator = { fg = colors.gray0, bg = colors.dark, bold = true },
 
   -- Others
   Debug = { fg = colors.text },

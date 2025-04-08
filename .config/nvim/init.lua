@@ -99,7 +99,6 @@ require('lazy').setup({
       'L3MON4D3/LuaSnip',
       version = 'v2.*',
       config = function()
-        -- require('vpryim.luasnip')
         require('vpryim.snippets')
       end
     },
@@ -107,10 +106,10 @@ require('lazy').setup({
     opts = {
       snippets = { preset = 'luasnip' },
       keymap = {
-        -- preset = 'super-tab',
         preset = 'none',
-        ['<C-n>'] = { 'show', 'show_documentation', 'hide_documentation' },
-        ['<Right>'] = { 'accept', 'snippet_forward', 'fallback' },
+        ['<C-n>'] = { 'show_and_insert', 'select_next', 'fallback_to_mappings' },
+        ['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
+        ['<Right>'] = { 'select_and_accept', 'snippet_forward', 'fallback' },
         ['<Left>'] = { 'snippet_backward', 'fallback' },
         ['<Up>'] = { 'select_prev', 'fallback' },
         ['<Down>'] = { 'select_next', 'fallback' },
@@ -121,11 +120,12 @@ require('lazy').setup({
       completion = {
         documentation = { auto_show = false },
         menu = { auto_show = false },
-        ghost_text = { enabled = true, show_with_menu = false },
+        list = {
+          selection = { preselect = true, auto_insert = true }
+        },
       },
       sources = {
-        -- default = { 'lsp', 'path', 'snippets', 'buffer' },
-        default = { 'snippets', 'lsp', 'path' },
+        default = { 'snippets', 'lsp', 'path', 'buffer' },
       },
       fuzzy = { implementation = "prefer_rust_with_warning" }
     },
