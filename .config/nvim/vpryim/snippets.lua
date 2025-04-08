@@ -19,6 +19,12 @@ luasnip.add_snippets("all", {
     t(')')
   }),
 
+  s('log', {
+    t('console.log('),
+    i(1, ""),
+    t(')')
+  }),
+
   s('uintl', {
     t('const intl = useIntl()'),
   }),
