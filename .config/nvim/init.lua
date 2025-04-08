@@ -99,7 +99,7 @@ require('lazy').setup({
       'L3MON4D3/LuaSnip',
       version = 'v2.*',
       config = function()
-        require('vpryim.luasnip')
+        -- require('vpryim.luasnip')
         require('vpryim.snippets')
       end
     },
@@ -107,9 +107,13 @@ require('lazy').setup({
     opts = {
       snippets = { preset = 'luasnip' },
       keymap = {
-        preset = 'super-tab',
-        ['<C-space>'] = {},
+        -- preset = 'super-tab',
+        preset = 'none',
         ['<C-n>'] = { 'show', 'show_documentation', 'hide_documentation' },
+        ['<Right>'] = { 'accept', 'snippet_forward', 'fallback' },
+        ['<Left>'] = { 'snippet_backward', 'fallback' },
+        ['<Up>'] = { 'select_prev', 'fallback' },
+        ['<Down>'] = { 'select_next', 'fallback' },
       },
       appearance = {
         nerd_font_variant = 'mono'
@@ -117,11 +121,11 @@ require('lazy').setup({
       completion = {
         documentation = { auto_show = false },
         menu = { auto_show = false },
-        -- ghost_text = { enabled = true, show_with_menu = false },
+        ghost_text = { enabled = true, show_with_menu = false },
       },
       sources = {
         -- default = { 'lsp', 'path', 'snippets', 'buffer' },
-        default = { 'lsp', 'path', 'snippets' },
+        default = { 'snippets', 'lsp', 'path' },
       },
       fuzzy = { implementation = "prefer_rust_with_warning" }
     },

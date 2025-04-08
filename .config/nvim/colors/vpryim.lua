@@ -123,7 +123,7 @@ local groups_dark = {
   Cursor = { fg = colors.text, bg = colors.pink },
   Underlined = { fg = colors.text, underline = true },
   SpecialKey = { fg = colors.text },
-  NonText = { fg = colors.text },
+  NonText = { fg = colors.gray0 },
   Directory = { fg = colors.text },
 
   -- Fold
@@ -134,10 +134,10 @@ local groups_dark = {
   MatchParen = { fg = colors.text, bg = colors.gray0 },
 
   -- Popup Menu
-  Pmenu = { fg = colors.text, bg = colors.gray3 },
+  Pmenu = { fg = colors.dark, bg = colors.gray3 },
   PmenuSbar = { fg = colors.dark, bg = colors.gray3 },
-  PmenuSel = { fg = colors.dark, bg = colors.text },
-  PmenuThumb = { fg = colors.dark, bg = colors.text },
+  PmenuSel = { fg = colors.dark, bg = colors.gray0 },
+  PmenuThumb = { fg = colors.dark, bg = colors.gray3 },
 
   -- Split
   VertSplit = { fg = colors.amber, bg = colors.dark, bold = true },
