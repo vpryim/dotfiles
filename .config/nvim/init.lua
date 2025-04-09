@@ -106,13 +106,15 @@ require('lazy').setup({
     opts = {
       snippets = { preset = 'luasnip' },
       keymap = {
-        preset = 'none',
+        preset = 'super-tab',
         ['<C-n>'] = { 'show_and_insert', 'select_next', 'fallback_to_mappings' },
-        ['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
-        ['<Right>'] = { 'select_and_accept', 'snippet_forward', 'fallback' },
-        ['<Left>'] = { 'snippet_backward', 'fallback' },
-        ['<Up>'] = { 'select_prev', 'fallback' },
-        ['<Down>'] = { 'select_next', 'fallback' },
+        -- preset = 'none',
+        -- ['<C-n>'] = { 'show_and_insert', 'select_next', 'fallback_to_mappings' },
+        -- ['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
+        -- ['<Right>'] = { 'select_and_accept', 'snippet_forward', 'fallback' },
+        -- ['<Left>'] = { 'snippet_backward', 'fallback' },
+        -- ['<Up>'] = { 'select_prev', 'fallback' },
+        -- ['<Down>'] = { 'select_next', 'fallback' },
       },
       appearance = {
         nerd_font_variant = 'mono'
