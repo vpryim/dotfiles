@@ -25,7 +25,7 @@ luasnip.add_snippets("all", {
     t(')')
   }),
 
-  s('uintl', {
+  s('usei', {
     t('const intl = useIntl()'),
   }),
 
