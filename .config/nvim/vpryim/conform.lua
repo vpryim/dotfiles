@@ -1,6 +1,6 @@
-local confirm = require("conform")
+local conform = require("conform")
 
-confirm.setup({
+conform.setup({
   formatters_by_ft = {
     lua = { "stylua" },
     css = { "prettierd" },
@@ -23,7 +23,7 @@ confirm.setup({
 })
 
 vim.keymap.set({ "n", "v" }, "<leader>mp", function()
-  confirm.format({
+  conform.format({
     lsp_fallback = true,
     async = false,
     timeout_ms = 500
