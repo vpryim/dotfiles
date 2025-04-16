@@ -17,5 +17,7 @@ vim.opt.signcolumn = 'number'
 vim.opt.showmode = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.autoread = true
+vim.opt.swapfile = false
 -- vim.opt.title = true
 -- vim.opt.colorcolumn = { 81, 101 }
