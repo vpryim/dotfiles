@@ -20,15 +20,16 @@ if vim.o.background == 'dark' then
   }
 else
   colors = {
-    text      = '#000000',
-    dark      = '#faf0be',
-    black     = '#faf0be',
-    gray0     = '#94884a',
-    gray1     = '#faeba2',
-    gray2     = '#b5a553',
-    gray3     = '#80753e',
+    text      = '#222222',
+    dark      = '#ffffff',
+    black     = '#f2f2f2',
+    gray0     = '#949494',
+    gray1     = '#808080',
+    gray2     = '#b5b5b5',
+    gray3     = '#e2e2e2',
     lime      = '#005fed',
     amber     = '#c73414',
+    -- amber     = '#005fed',
     yellow    = '#ffe59e',
     blue      = '#005fed',
     green     = '#79dcaa',
@@ -48,6 +49,7 @@ local groups_dark = {
   Constant = { fg = colors.text },
   Character = { fg = colors.text },
   SpecialChar = { fg = colors.text },
+  ['@variable'] = { fg = colors.text },
 
   -- Specials
   Title = { fg = colors.violet },
@@ -123,7 +125,7 @@ local groups_dark = {
   Cursor = { fg = colors.text, bg = colors.pink },
   Underlined = { fg = colors.text, underline = true },
   SpecialKey = { fg = colors.text },
-  NonText = { fg = colors.gray0 },
+  NonText = { fg = colors.gray1 },
   Directory = { fg = colors.text },
 
   -- Fold
@@ -175,12 +177,13 @@ local groups_dark = {
 local groups_light = {
   -- Primitives
   String = { fg = colors.amber },
-  Number = { fg = colors.lime },
-  Boolean = { fg = colors.lime },
-  Float = { fg = colors.lime },
+  Number = { fg = colors.lime, bg = '#F2F7FE' },
+  Boolean = { fg = colors.lime, bg = '#F2F7FE' },
+  Float = { fg = colors.lime, bg = '#F2F7FE' },
   Constant = { fg = colors.text },
   Character = { fg = colors.text },
   SpecialChar = { fg = colors.text },
+  ['@variable'] = { fg = colors.text },
 
   -- Specials
   Title = { fg = colors.violet },
@@ -207,7 +210,7 @@ local groups_light = {
   CursorColumn = { fg = colors.text, bg = colors.gray3 },
 
   -- Visual
-  Visual = { bg = colors.gray1 },
+  Visual = { bg = colors.gray3 },
   VisualNOS = { fg = colors.gray3, bg = colors.text },
   Search = { fg = colors.dark, bg = colors.amber },
   IncSearch = { fg = colors.dark, bg = colors.amber },
@@ -256,7 +259,7 @@ local groups_light = {
   Cursor = { fg = colors.text, bg = colors.pink },
   Underlined = { fg = colors.text, underline = true },
   SpecialKey = { fg = colors.text },
-  NonText = { fg = colors.text },
+  NonText = { fg = colors.gray3 },
   Directory = { fg = colors.text },
 
   -- Fold
@@ -273,8 +276,8 @@ local groups_light = {
   PmenuThumb = { fg = colors.dark, bg = colors.text },
 
   -- Split
-  VertSplit = { fg = colors.gray1, bg = colors.dark, bold = true },
-  WinSeparator = { fg = colors.gray1, bg = colors.dark, bold = true },
+  VertSplit = { fg = colors.gray0, bg = colors.dark, bold = true },
+  WinSeparator = { fg = colors.gray0, bg = colors.dark, bold = true },
 
   -- Others
   Debug = { fg = colors.text },
@@ -332,12 +335,12 @@ local lualine_dark = {
 
 local lualine_light = {
   normal = {
-    a = { fg = colors.blue, bg = colors.black },
-    b = { fg = colors.blue, bg = colors.black },
-    c = { fg = colors.blue, bg = colors.black },
-    x = { fg = colors.blue, bg = colors.black },
-    y = { fg = colors.blue, bg = colors.black },
-    z = { fg = colors.blue, bg = colors.black },
+    a = { fg = colors.text, bg = colors.dark },
+    b = { fg = colors.text, bg = colors.dark },
+    c = { fg = colors.text, bg = colors.dark },
+    x = { fg = colors.text, bg = colors.dark },
+    y = { fg = colors.text, bg = colors.dark },
+    z = { fg = colors.text, bg = colors.dark },
   },
   insert = {
     x = { fg = colors.lime, bg = colors.black },
