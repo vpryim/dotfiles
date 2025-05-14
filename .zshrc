@@ -90,7 +90,6 @@ abbr -S -q la='ls -la'
 abbr -S -q zshrc='nvim ~/.zshrc'
 
 # alias
-alias vim='nvim'
 alias ..='cd ..'
 alias prettyjson="xargs -0 node -e \"console.log(require('util').inspect(JSON.parse(process.argv[1]), { depth: 4, colors: true }))\""
 
